@@ -1,0 +1,20 @@
+{
+  "name": "ml-data-bucket-worker",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev --local",
+    "deploy": "wrangler deploy",
+    "db:init:local": "wrangler d1 execute ml-data-bucket --local --file schema.sql",
+    "db:init:remote": "wrangler d1 execute ml-data-bucket --remote --file schema.sql",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "aws4fetch": "1.0.20"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "4.20250924.0",
+    "typescript": "5.9.2",
+    "wrangler": "4.40.0"
+  }
+}

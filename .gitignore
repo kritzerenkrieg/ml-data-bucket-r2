@@ -1,0 +1,10 @@
+.env
+.venv/
+__pycache__/
+.pytest_cache/
+exports/
+worker/node_modules/
+worker/.wrangler/
+worker/.dev.vars
+worker/wrangler.toml
+worker/.test-build/

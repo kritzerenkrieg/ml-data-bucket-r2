@@ -1,0 +1,6 @@
+requests>=2.31
+# Optional: download straight from R2 instead of through the Worker (set R2_* env vars).
+boto3>=1.34
+# Optional: only needed when a sample has no image_width/image_height and --labels must convert boxes.
+pillow>=10
+pytest>=8

@@ -1,0 +1,20 @@
+name = "ml-data-bucket"
+main = "src/index.ts"
+compatibility_date = "2025-09-01"
+workers_dev = true
+
+[vars]
+R2_BUCKET_NAME = "ml-data-bucket"
+# Set to your Cloudflare account id to enable presigned uploads straight to R2.
+# Leave empty to fall back to uploads through the Worker (also what local dev uses).
+R2_ACCOUNT_ID = ""  # optional: "<your-cloudflare-account-id>"
+
+[[r2_buckets]]
+binding = "BUCKET"
+bucket_name = "ml-data-bucket"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "ml-data-bucket"
+# Replace with the id printed by `wrangler d1 create ml-data-bucket`.
+database_id = "<your-d1-database-id>"
